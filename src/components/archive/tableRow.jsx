@@ -120,7 +120,7 @@ const TableRow = memo(function TableRow({ item, onDelete }) {
         </div>
 
         <div className="flex justify-around md:justify-end gap-1 md:gap-2 lg:gap-4 w-full md:col-span-3 mt-2 md:mt-0 pt-3 md:pt-0 border-t border-gray-100 md:border-none">
-          <a href={item.media_url || item.url} target="_blank" rel="noreferrer" className={`${actionBtnClass} hover:text-primaryColor bg-gray-50 md:bg-transparent w-10 h-10 md:w-auto md:h-auto rounded-full md:rounded-none`}>
+          <a href={item.url} target="_blank" rel="noreferrer" className={`${actionBtnClass} hover:text-primaryColor bg-gray-50 md:bg-transparent w-10 h-10 md:w-auto md:h-auto rounded-full md:rounded-none`}>
             <span className={`text-gray-700 hidden md:block ${tooltipClass}`}>بارگیری فایل</span>
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
           </a>
@@ -130,8 +130,8 @@ const TableRow = memo(function TableRow({ item, onDelete }) {
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
           </button>
 
-          <button onClick={handleCopyText} className={`${actionBtnClass} bg-gray-50 md:bg-transparent w-10 h-10 md:w-auto md:h-auto rounded-full md:rounded-none`}>
-            <span className={`text-gray-700 hidden md:block ${tooltipClass}`}>کپی</span>
+          <button onClick={handleCopyText} className={`${actionBtnClass} bg-gray-50 md:bg-transparent w-10 h-10 md:w-auto md:h-auto rounded-full md:rounded-none hover:text-primaryColor`}>
+            <span className={`text-gray-700 hidden md:block ${tooltipClass} `}>کپی</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
             </svg>
