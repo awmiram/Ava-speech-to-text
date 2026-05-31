@@ -1,6 +1,8 @@
 import { Menu } from '@headlessui/react';
+
 import userIcon from '../assets/icons/headerIcons/userIcon.svg';
 import dropIcon from '../assets/icons/headerIcons/dropIcon.svg';
+import logoutIcon from '../assets/icons/headerIcons/logout.svg'
 
 export default function Header() {
   return (
@@ -25,7 +27,7 @@ export default function Header() {
                 <Menu.Item>
                   {({ active }) => (
                     <button className={`flex items-center justify-center gap-2 py-2 rounded-lg w-full transition-colors cursor-pointer ${active ? 'bg-primaryColor/5' : ''}`}>
-                      <svg width="12.607" height="14" viewBox="0 0 12.607 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <g transform="translate(0.5 0.5)"> <g transform="translate(3.25 6.5)"> <path d="M0 0L8.35714 0" fill="none" strokeWidth="1" stroke="#00BA9F" strokeLinecap="round" strokeLinejoin="round" /> </g> <g> <path d="M5.74553 0L1.45089 0C0.638393 0 0 0.638393 0 1.39286L0 11.5491C0 12.3616 0.638393 13 1.45089 13L5.74553 13" fill="none" strokeWidth="1" stroke="#00BA9F" strokeLinecap="round" strokeLinejoin="round" /> </g> <path d="M0 0L2.20536 2.20536L0 4.41071" fill="none" strokeWidth="1" stroke="#00BA9F" strokeLinecap="round" strokeLinejoin="round" transform="translate(9.402 4.295)" /> </g></svg>
+                      <img src={logoutIcon} />
                       <span className="text-sm font-semibold">خروج</span>
                     </button>
                   )}
