@@ -1,16 +1,64 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎙️ AVA Speech-to-Text
 
-Currently, two official plugins are available:
+A modern, high-performance Single Page Application (SPA) engineered to provide seamless speech-to-text conversion, media uploading, and audio archive management. Built with a heavy emphasis on clean architecture, performance optimization, and an accessible User Experience (UX).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<div align="center">
+  <img src="https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Vite_8-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+  <img src="https://img.shields.io/badge/Redux_Toolkit-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
+  <img src="https://img.shields.io/badge/SWR-FFFFFF?style=for-the-badge&logo=vercel&logoColor=black" alt="SWR" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS_4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+</div>
 
-## React Compiler
+---
+## 🛠️ Tech Stack Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The application leverages a modern ecosystem of libraries to ensure maintainability and scalability:
 
-## Expanding the ESLint configuration
+* **Core:** React.js built with Vite for rapid HMR and optimized bundling.
+* **State Management:** Redux Toolkit (managing complex asynchronous transcription states).
+* **Data Fetching:** SWR (for caching and revalidation) and Axios.
+* **Styling & UI:** Tailwind CSS (utility-first styling), Headless UI (accessible unstyled components), and React Hot Toast.
+* **Routing:** React Router DOM.
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Highlights & Features
+
+- **Custom Audio Player Engine:** highly flexible audio player . It features precise timeline seeking, dynamic theme injection based on the active tab context, and buffering states.
+- **Advanced React Memoization:** The Archive data table is heavily optimized using `memo` and `useCallback`. This prevents the "Flex Blowout" effect and expensive re-renders of the entire DOM tree when a single row is expanded or deleted, maintaining a smooth experience.
+- **Multi-Source Transcription:** - 🎤 Native `MediaRecorder` API integration for live browser audio capturing.
+  - 📁 Seamless handling of `FormData` for local audio/video file uploads.
+  - 🔗 Direct URL parsing capabilities.
+
+---
+
+## 💻 Installation & Local Development
+
+1. **Clone the repository:**
+
+  
+2. **Install the dependencies:**
+```bash
+npm install
+
+```
+
+
+3. **Spin up the Vite development server:**
+```bash
+npm run dev
+
+```
+
+
+*The application will compile instantly and be available at `http://localhost:5173`.*
+
+---
+
+**Amirhossein Abdollahabadi**
+
+* GitHub: [@awmiram](https://www.google.com/search?q=https://github.com/awmiram)
+* Role: Junior React Developer & Computer Engineering Student
+
+*Developed as a showcase of modern Front-End engineering practices and clean architecture.*
