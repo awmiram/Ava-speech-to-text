@@ -149,7 +149,7 @@ export default function TranscriptionResult({ transcriptionData, mediaUrl, onRes
             در حال بارگذاری پلیر...
           </div>
         }>
-            <div className="self-center">
+            <div className="self-center w-130 max-w-full">
           <AudioPlayer src={mediaUrl} tab={tab} />
             </div>
         </Suspense>

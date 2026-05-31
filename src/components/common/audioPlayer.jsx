@@ -99,7 +99,7 @@ export default function AudioPlayer({ src , tab }) {
   const progressPercentage = duration ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="bg-gray-50  mb-4 px-5 w-130 rounded-xl border-gray-100 flex items-center gap-4" dir="ltr">
+    <div className="bg-gray-50  mb-4 px-5   rounded-xl border-gray-100 flex items-center gap-4" dir="ltr">
       {src && (
         <video ref={audioRef} src={src} onTimeUpdate={handleTimeUpdate} onLoadedMetadata={handleLoadedMetadata} onEnded={() => setIsPlaying(false)} className="hidden"/>
       )}
@@ -120,8 +120,8 @@ export default function AudioPlayer({ src , tab }) {
       <div className="flex-1 flex items-center gap-3 text-xs text-gray-500 font-medium tabular-nums">
         <span>{formatTime(currentTime)}</span>
         <div ref={progressBarRef} onClick={handleProgressClick} className="flex-1 h-1.5 bg-gray-200 rounded-full relative cursor-pointer group">
-          <div className={`absolute left-0 top-0 h-full  rounded-full transition-all duration-100 ${tab === 'record' ? 'bg-primaryColor': '' } ${tab === 'file' ? 'bg-blue-500' : ''} ${tab === 'link' ? 'bg-rose-500' : '' } `} style={{ width: `${progressPercentage}%` }}>
-            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-2.5 h-2.5 bg-white border border-primaryColor rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div className={`absolute w-full left-0 top-0 h-full  rounded-full transition-all duration-100 ${tab === 'record' ? 'bg-primaryColor': '' } ${tab === 'file' ? 'bg-blue-500' : ''} ${tab === 'link' ? 'bg-rose-500' : '' } `} style={{ width: `${progressPercentage}%` }}>
+            <div className="absolute  right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-2.5 h-2.5 bg-white border border-primaryColor rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </div>
         </div>
         
@@ -143,7 +143,7 @@ export default function AudioPlayer({ src , tab }) {
         <div className="relative flex-1 h-1.5 flex items-center group cursor-pointer">
           <div className="absolute w-full h-full bg-gray-200 rounded-full"></div>
         
-          <div className={`absolute left-0 top-0 h-full  rounded-full transition-all duration-75 pointer-events-none ${tab === 'record' ? 'bg-primaryColor': '' } ${tab === 'file' ? 'bg-blue-500' : ''} ${tab === 'link' ? 'bg-rose-500' : '' }`} style={{ width: `${volume * 100}%` }}>
+          <div className={`absolute left-0 w-full top-0 h-full  rounded-full transition-all duration-75 pointer-events-none ${tab === 'record' ? 'bg-primaryColor': '' } ${tab === 'file' ? 'bg-blue-500' : ''} ${tab === 'link' ? 'bg-rose-500' : '' }`} style={{ width: `${volume * 100}%` }}>
             <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-2.5 h-2.5 bg-white border border-primaryColor rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </div>
 

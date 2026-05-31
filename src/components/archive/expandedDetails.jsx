@@ -52,7 +52,7 @@ export default function ExpandedDetails({ item }) {
         )}
       </div>
 
-      <div className="mt-2 rounded-xl overflow-hidden self-center">
+      <div className="mt-2 w-130 max-w-full rounded-xl overflow-hidden self-center">
         <AudioPlayer tab={'record'} src={mediaUrl} />
       </div>
 
